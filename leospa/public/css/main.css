@@ -1,0 +1,353 @@
+.header {
+    min-height: 100vh;
+    position: relative;
+    background-image: url("../images/leaf.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 12.5%;
+}
+
+.header__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 43.5%;
+    z-index: 3;
+}
+
+.header__top {
+    padding-top: 2rem;
+    display: flex;
+    align-items: baseline;
+}
+
+.header__logo {
+    max-width: 10rem;
+}
+
+/*Menu*/
+.menu {
+    margin-left: 14%;
+    position: relative;
+    z-index: 2;
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.menu__item {
+    margin: 0 2.5rem;
+}
+
+.menu__link {
+    color: var(--gray-dark);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.2s linear;
+}
+
+.menu__link:hover {
+    color: var(--primary-color);
+}
+
+.header__content {
+    padding-top: 19rem;
+    position: relative;
+    max-width: 55.5rem;
+    z-index: 2;
+}
+
+.header__content-slogan {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.header__content-title {
+    font-size: 6rem;
+    color: var(--gray-dark);
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+}
+
+.header__content-desc {
+    font-size: 1.5rem;
+    color: var(--gray-dark);
+    margin-bottom: 5rem;
+}
+
+.header__content-cta {
+    display: flex;
+    align-items: center;
+}
+
+.header__content-cta>a:nth-child(1) {
+    margin-right: 5rem;
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+    outline: none;
+    padding: 1.5rem 3rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+}
+
+.btn--rounded {
+    border-radius: 5rem;
+}
+
+.btn--icon i {
+    margin-left: 1rem;
+    color: inherit;
+}
+
+.btn__play-video {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.btn__play-video>i {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    background-color: var(--bg-block);
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.btn__play-video>span {
+    color: var(--gray-dark);
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 767px) {
+    .about__inner {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.about__inner {
+    position: relative;
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+}
+
+@media screen and (max-width: 767px) {
+    .about__inner {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.about__flower1 {
+    position: absolute;
+    max-width: 13.5rem;
+    top: 0;
+    left: 0;
+}
+
+.about__flower2 {
+    position: absolute;
+    max-width: 7rem;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.about__content {
+    position: relative;
+    z-index: 5;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .about__content {
+        max-width: 72%;
+    }
+}
+
+.about__content img {
+    margin: 0 auto 4rem;
+    max-width: 8rem;
+}
+
+.about__content h3 {
+    text-transform: uppercase;
+    color: var(--gray-light);
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.about__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.about__item {
+    width: 24.8%;
+    position: relative;
+}
+
+@media screen and (max-width: 1023px) {
+    .about__item {
+        width: 49.6%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about__item {
+        width: 100%;
+    }
+}
+
+.about__item:hover .about__item-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.about__item-content {
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: var(--secondary-font);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+.about__item-content>img {
+    max-width: 5rem;
+    margin-bottom: 1rem;
+}
+
+.about__item-content>span {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.btn--secondary {
+    background-color: var(--gray-dark);
+}
+
+.popular {
+    background-color: #fff;
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+}
+
+.popular__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.popular__item {
+    width: calc(33.33% - 13.33px);
+    border: 1px solid #eee;
+}
+
+.popular__link {
+    height: 100%;
+    display: block;
+    padding: 2rem 2rem 4.5rem;
+    text-align: center;
+    transition: box-shadow 0.2s linear;
+}
+
+.popular__link .btn--secondary {
+    transition: background-color 0.2s linear;
+}
+
+.popular__link img {
+    width: 100%;
+    height: 26.5rem;
+    object-fit: cover;
+}
+
+.popular__link .title {
+    font-family: var(--secondary-font);
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+    color: var(--gray-dark);
+}
+
+.popular__link .desc {
+    font-size: 1.4rem;
+    line-height: 2;
+    color: var(--gray-light);
+    margin-bottom: 4rem;
+}hea
+.popular__link:hover {
+    box-shadow: 0 0 14px 14px rgba(0, 0, 0, 0.025);
+}
+
+.popular__link:hover .btn--secondary {
+    background-color: var(--primary-color);
+}
+
+/* @media screen and (max-width: 767px) {
+    .popular__item {
+        width: 100%;
+        margin-bottom: 2.5rem;
+    }
+} */
+.heading__title{
+    font-size: 4rem;
+    color: var(--gray-dark);
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+}
+.heading__desc{
+    font-size: 1.5rem;
+    color: var(--gray-dark);
+    margin-bottom: 5rem;
+}
+.container__popular{
+    position: relative;
+    z-index: 5;
+    margin: 0 auto;
+    text-align: center;
+}
